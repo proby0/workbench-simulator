@@ -1,0 +1,37 @@
+using System;
+using UnityEngine;
+
+public class InGameShop : MonoBehaviour
+{
+    public int dollars;
+    public int batteryPrice = 2;
+    public int joystickPrice = 10;
+    public int magneticKeysPrice = 5;
+
+    public void BuyItem(int itemPrice)
+    {
+        if (dollars >= itemPrice)
+        {
+            dollars -= itemPrice;
+        }
+        else
+        {
+            // Not enough money
+        }
+    }
+
+    public void BuyBattery()
+    {
+        BuyItem(batteryPrice);
+    }
+
+    public void BuyJoystick()
+    {
+        BuyItem(joystickPrice);
+    }
+
+    public void BuyMagneticKeys()
+    {
+        BuyItem(magneticKeysPrice);
+    }
+}
